@@ -1,0 +1,266 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #006699;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: #004466;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+    text-shadow: 0 0 5px #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.4em;
+    margin: 10px 0 0;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* River Overview Section */
+.river-overview {
+    padding: 40px;
+    text-align: center;
+    animation: slideIn 1.5s ease-out;
+}
+
+.river-overview h2 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #004466;
+}
+
+.river-card {
+    display: inline-block;
+    width: 30%;
+    margin: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.river-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.river-card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.river-card:hover img {
+    transform: scale(1.05);
+}
+
+.river-card h3 {
+    margin: 20px;
+    font-size: 1.8em;
+    color: #004466;
+}
+
+.river-card p {
+    padding: 0 20px;
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.river-card a {
+    display: block;
+    padding: 15px;
+    background-color: #006699;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0 0 10px 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.river-card a:hover {
+    background-color: #004466;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: #006699;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 1em;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Keyframe Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .river-card {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+.river-details {
+    padding: 80px 20px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.river-details .content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6); /* Background overlay to enhance text readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Main content area with full background */
+.full-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 20px;
+    min-height: calc(100vh - 160px); /* Adjusting height minus header and footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Floating content bubbles */
+.floating-content {
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent background for readability */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    backdrop-filter: blur(5px);
+}
+
+/* Footer stays white */
+footer {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
