@@ -25,4 +25,4 @@ This project is a recreation of an old program I made in highschool, this is a w
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/rivers-of-new-zealand.git
+   git clone https://github.com/Cody-Alexander/rivers-of-new-zealand.git
